@@ -6,7 +6,7 @@ services:
     container_name: freshrss-app
     restart: always
     ports:
-      - 8080:80
+      - 8080:8080
     volumes:
       - ~/freshrss/data:/config
       - ~/freshrss/extensions:/app/www/extensions
