@@ -232,15 +232,17 @@ java -jar kiftd-1.1.0-RELEASE.jar -console
 #### Freshrss
 
 ```
-git clone https://github.com/Lirzh/Onecloud-Freshrss.git
+mkdir Onecloud-Freshrss
 cd Onecloud-Freshrss
+curl https://raw.bgithub.xyz/Lirzh/Onecloud-can-do/refs/heads/main/Onecloud-Freshrss/docker-compose.yaml -o docker-compose.yaml
 docker-compose up -d
 ```
 
 #### Openspeedtest
 
 ```
-git clone https://github.com/Lirzh/Onecloud-openspeedtest.git
+mkdir Onecloud-openspeedtest
+curl https://raw.bgithub.xyz/Lirzh/Onecloud-can-do/refs/heads/main/Onecloud-openspeedtest/OpenSpeedTest.yaml -o docker-compose.yaml
 cd Onecloud-openspeedtest
 docker-compose up -d
 ```
