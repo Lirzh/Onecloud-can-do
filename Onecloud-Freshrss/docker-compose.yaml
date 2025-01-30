@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  freshrss-app:
+    image: linuxserver/freshrss:latest
+    container_name: freshrss-app
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ~/freshrss/data:/config
+      - ~/freshrss/extensions:/app/www/extensions
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=1000
+      - PGID=1000
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+      - 1.1.1.1
+    security_opt:
+      - seccomp:unconfined
