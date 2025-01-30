@@ -1,25 +1,27 @@
 # Onecloud-can-do
  玩客云能部属的服务集合
 
-###### apt 一键换源脚本 
+如有误，请帮忙发issue纠正，谢谢。
+
+#### apt 一键换源脚本 
 
 ```
 bash <(curl -sSL https://linuxmirrors.cn/main.sh)
 ```
 
-###### docker 安装脚本
+#### docker 安装脚本
 
 ```
 curl -fsSL https://get.docker.com | bash -s docker
 ```
 
-###### docker 一键换源脚本
+#### docker 一键换源脚本
 
 ```
 bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 ```
 
-###### git 一键换源脚本
+#### git 一键换源脚本
 
 这个大概有24小时的延迟(即内容是昨天的)
 
@@ -27,25 +29,25 @@ bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 git config --global url."https://kgithub.com/" .insteadOf "https://github.com/"
 ```
 
-###### alist
+#### alist
 
 ```
 docker run -d --restart=always -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=alist xhofe/alist-aria2:latest
 ```
 
-###### CasaOS
+#### CasaOS
 
 ```
 curl -fsSL https://get.casaos.io | sudo bash
 ```
 
-###### 1panel
+#### 1panel
 
 ```
 curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
 ```
 
-###### Sun-Panel
+#### Sun-Panel
 
 ```
 docker pull hslr/sun-panel
@@ -55,14 +57,14 @@ docker run -d --restart=always -p 3002:3002
 hslr/sun-panel:latest
 ```
 
-###### typecho
+#### typecho
 
 ```
 mkdir /root/tyepcho
 docker run -d --restart=always -p 80:80 --name typecho -v "/root/tyepcho":/var/www/html yangxuan8282/typecho:php-arm
 ```
 
-###### aria
+#### aria
 
 ```
 docker run -d \
@@ -80,7 +82,7 @@ docker run -d \
     p3terx/aria2-pro
 ```
 
-###### AriaNG
+#### AriaNG
 
 ```
 docker pull p3terx/ariang
@@ -93,7 +95,7 @@ docker run -d \
 p3terx/ariang
 ```
 
-###### Openwrt
+#### Openwrt
 
 请看这个网址：
 
@@ -101,7 +103,7 @@ p3terx/ariang
 https://www.jianshu.com/p/ab86fd279942#_Toc25995
 ```
 
-###### MC服务器
+#### MC服务器
 
 请看这个网址：
 
@@ -109,7 +111,7 @@ https://www.jianshu.com/p/ab86fd279942#_Toc25995
 https://github.com/Lirzh/Onecloud-MCServer
 ```
 
-###### Zerotier
+#### Zerotier
 
 ```
 #安装
@@ -123,7 +125,7 @@ docker exec zerotier zerotier-cli join <your-net-id>
 docker exec zerotier zerotier-cli leave <your-net-id>
 ```
 
-###### 微力同步
+#### 微力同步
 
 ```
 curl http://www.verysync.com/shell/verysync-linux-installer/go-installer.sh > go-installer.sh
@@ -131,15 +133,15 @@ chmod +x go-installer.sh
 ./go-installer.sh
 ```
 
-###### DDNSTO
+#### DDNSTO
 
 ```
 docker run -d --name=ddnsto --restart always --network host -e TOKEN=<自己的token> -e DEVICE_IDX=0 linkease/ddnsto:3.0.0
 ```
 
- (注意替换自己的token)
+######  (注意替换自己的token)
 
-###### Verysync
+#### Verysync
 
 ```
 back_path=/mnt/verysync
@@ -151,7 +153,7 @@ docker run -d \
 unwenliu/verysync:armv7
 ```
 
-###### transmission
+#### transmission
 
 ```
 docker run \
@@ -165,7 +167,7 @@ docker run \
     gists/transmission
 ```
 
-###### qbittorrent
+#### qbittorrent
 
 ```
 docker run -d \
@@ -181,7 +183,7 @@ docker run -d \
   ghcr.io/linuxserver/qbittorrent
 ```
 
-###### Nginx & PHP
+#### Nginx & PHP
 
 ```
 apt install nginx php-fpm
@@ -191,7 +193,7 @@ apt install nginx php-fpm
 
 默认情况下，nignx 的站点文件位置在 `/var/www/html/`
 
-###### 易有云
+#### 易有云
 
 ```
 docker run -d \
@@ -208,7 +210,7 @@ docker run -d \
     linkease/linkease:latest
 ```
 
-###### Kiftd
+#### Kiftd
 
 (需要java8或以上)
 
@@ -227,7 +229,7 @@ java -jar kiftd-1.1.0-RELEASE.jar -console
 -start
 ```
 
-###### Freshrss
+#### Freshrss
 
 ```
 git clone https://github.com/Lirzh/Onecloud-Freshrss.git
@@ -235,7 +237,7 @@ cd Onecloud-Freshrss
 docker-compose up -d
 ```
 
-###### Openspeedtest
+#### Openspeedtest
 
 ```
 git clone https://github.com/Lirzh/Onecloud-openspeedtest.git
